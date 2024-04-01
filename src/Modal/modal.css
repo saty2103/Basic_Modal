@@ -1,0 +1,40 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 75vw;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  box-shadow: 3px 3px 10px grey;
+  padding: 10px 20px;
+  background-color: #fff;
+  z-index: 999999;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0.2;
+    transform: translate(-50%, -250%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal.active {
+  animation-name: fade-in;
+  animation-duration: 0.8s;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-close {
+  cursor: pointer;
+  background-color: skyblue;
+  padding: 4px;
+  border-radius: 50%;
+}
